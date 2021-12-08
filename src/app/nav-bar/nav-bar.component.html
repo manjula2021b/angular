@@ -1,0 +1,45 @@
+<p>nav-bar works!</p>
+<div class="container">
+    <div class="logo">
+        <h3>logo</h3>
+    </div>
+    <div class="CarType">
+        <h2>HAPPY</h2>
+    </div>
+    <div class="desc">
+        <p> Mtech, compute Science engineering,jnnce,shimoga</p>
+    </div>
+    <div class="link">
+
+        <a href="#" class="link-item">Learn More</a>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h4>Reactive Form Examples</h4>
+<div class="BigBox">
+<form [formGroup]="myReactiveForm" (ngSubmit)="onSubmit()">
+    <label for="FirstNameOfCandidate">First Name Of Candidate</label>
+    <input type="text" id="FirstNameOfCandidate"  placeholder="First Name Of Candidate" formControlName="FirstNameOfCandidate">
+    <br>
+    <label for="LastNameOfCandidate">Last Name Of Candidate</label>
+    <input type="text" id="LastNameOfCandidate" placeholder="Last Name Of Candidate" formControlName="LastNameOfCandidate">
+    <br>
+    <label for="EmailAdressOfCandidate">Email Adress Of Candidate</label>
+    <input type="text" id="EmailAdressOfCandidate" placeholder="Email Adress Of Candidate" formControlName="EmailAdressOfCandidate">
+    <br>
+    <!-- <small> "ngIf="!myReactiveForm.get('"EmailAdressOfCandidate').valid && !myReactiveForm.get('"EmailAdressOfCandidate').touched"</small> -->
+    <label for="PanNumerOfCandidate">Password Of Candidate</label>
+    <input type="text" id="PanNumerOfCandidate" placeholder="PanNumer Of Candidate" formControlName="PanNumerdOfCandidate">
+    <br>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+</div>

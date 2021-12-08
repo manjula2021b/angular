@@ -1,0 +1,9 @@
+    .Box{
+     width:650px;   
+    border: 5px solid lightslategray;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    align-items: center;
+    margin-left: 360px;
+}
