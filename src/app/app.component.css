@@ -1,0 +1,14 @@
+.box{
+    display: flex;
+}
+.changeColor{
+    color: hotpink;
+}
+.bgColor{
+    background-color: khaki;
+}
+.newfont{
+    color: lightseagreen;
+}
+
+

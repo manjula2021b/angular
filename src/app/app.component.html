@@ -1,0 +1,169 @@
+<h1>{{myName}}</h1>
+
+<h1>Hello</h1>
+
+<app-login></app-login>
+
+<app-signup></app-signup>
+
+<div class="box">
+<app-nav-bar></app-nav-bar>
+<app-nav-bar></app-nav-bar>
+<app-nav-bar></app-nav-bar>
+</div>
+
+<h1>{{getName("Bruce")}}</h1>
+<h5>Event click:</h5>
+<button (click)="getN('Wyne')">Click Me</button>
+<br>
+<br>
+<h5>Event keyup:</h5>
+<input type="text" name="" id="" (keyup)="myEvent('keyup event engaged')">
+<br>
+<br>
+<h5>Event keydown:</h5>
+<input type="text" name="" id="" (keydown)="myEvent('keydown event engaged')">
+<br>
+<br>
+<h5>Event keypress:</h5>
+<input type="text" name="" id="" (keypress)="myEvent('keypress is working')">
+<br>
+<br>
+<br>
+<br>
+<br>
+<h4>Disable and enable component:</h4>
+<input type="text" value={{dname}} disabled={{disabledBox}}>
+<input type="text" [value]="dname" [disabled]="disabledBox">
+<button (click)="enableInput()">Enable Me</button>
+<br>
+<br>
+<br>
+<input type="text" [placeholder]="pholder">
+<button (click)="changepholder()">click me</button>
+<br>
+<br>
+<br>
+<h5>ngIf Component:</h5>
+<h1 *ngIf="day=='morning' else elseBlock">Hello</h1>
+<ng-template #elseBlock>
+    <h1>Bye</h1>
+</ng-template>
+<br>
+<br>
+<h1 *ngIf="holiday=='today' else elseBlock">Not working</h1>
+<ng-template #elseBlock>
+    <h1>working</h1>
+</ng-template>
+<br>
+<br>
+<h1 *ngIf="greet then thenBlock else elseBlock"></h1>
+<ng-template #thenBlock><h1>Bye</h1></ng-template>
+<ng-template #elseBlock><h1>GoodBye</h1></ng-template>
+<br>
+<br>
+<app-user-list></app-user-list>
+<br>
+<br>
+<h5>ngFor Component:</h5>
+<h4 *ngFor="let aName of aNames">
+    {{aName.studentName}}
+    {{aName.studentAge}}
+</h4>
+<br>
+<br>
+<h4 *ngFor="let animal of animals">
+    {{animal.animalName}}
+    {{animal.animalType}}
+</h4>
+<br>
+<h5>table creation</h5>
+<table border="1">
+    <tr>
+        <td>SName</td>
+        <td>SPercentage</td>
+    </tr>
+    <tr *ngFor="let SName of SNames">
+        <td>{{SName.StuName}}</td>
+        <td>{{SName.StuPercentage}}</td>
+    </tr>
+</table>
+<br>
+<br>
+<h4>ngStyle Attribute Directive</h4>
+<h1 style="color:red">Hello</h1>
+<h1 [ngStyle]="{'color':'yellow'}">Good Morning</h1>
+<h1 [ngStyle]="{'color': textColor}">Have a nice Day</h1>
+<h1 [ngStyle]="{'background-color':bgColor==='green'?'green':'gray'}">Smile</h1>
+<br>
+<br>
+<h4>ngClass  Attribute Directive</h4>
+<h1 [ngClass]="'changeColor'">Hi</h1>
+<h1 [ngClass]="'changeColor bgColor'">Hello</h1>
+<h1 [ngClass]="styleColor">Hello</h1>
+<h1 [ngClass]="styleColor==='font'?'bgColor':'changeColor'">Morning</h1>
+<br>
+<br>
+<h4>Custom  Attribute Directivea and host binding:</h4>
+<h1 appHighlight>Its all about directive</h1>
+<br>
+<br>
+<br>
+<h4>Examples for pipes:</h4>
+<h5>builtInPipes:</h5>
+<h1>{{'UPPER' | lowercase}}</h1>
+<h1>{{'lower' | uppercase}}</h1>
+<h1>{{'123' | currency}}</h1>
+<h1>{{dateExample |date}}</h1>
+<h1>{{'0.50' | percent}}</h1>
+<br>
+<br>
+<h4>Parameterized Pipes:</h4>
+<h1>{{'123' | currency:'GBP'}}</h1>
+<h1>{{dateExample | date:'long'}}</h1>
+<h1>{{dateExample | date:'short'}}</h1>
+<h1>{{dateExample | date:'dd/MM/yy'}}</h1>
+<h1>{{'0.512' | percent:'3.2-3'}}</h1>
+<br>
+<br>
+<h4>Chaining Pipes:</h4>
+<h1>{{dateExample | date | uppercase}}</h1>
+<h1>{{'123' | currency:'GBP' | lowercase}}</h1>
+<br>
+<br>
+<h4>Services and dependencies Example:</h4>
+<app-login></app-login>
+<br>
+<br>
+<br>
+<h4>Form Example:</h4>
+<form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+<label for="StudentFName">Student First Name</label>
+<input type="text" id="StudentFName" name="StudentFName" [(ngModel)]="StudentFName" required minlength="3">
+<br>
+<br>
+<label for="StudentLName">Student Last Name</label>
+<input type="text" id="StudentLName" name="StudentLName" [(ngModel)]="StudentLName">
+<br>
+<br>
+<label for="StudentAgee">Student Age</label>
+<input type="text" id="StudentAgee" name="StudentAgee" [(ngModel)]="StudentAgee">
+<br>
+<br>
+<input type="checkbox" id="terms" name="terms" [(ngModel)]="terms" required>I accept the terms and conditions
+<br>
+<br>
+<button type="submit" [disabled]="!myForm.valid">Submit</button>
+<br>
+<br>
+<button (click)="resetForm(myForm)">Reset</button>
+</form>
+
+<br>
+
+<br>
+<br>
+<br>
+
+
+
